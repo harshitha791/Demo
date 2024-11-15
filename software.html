@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #gg {
+            display: none;
+            font-weight: bold;
+            background-color: #90EE90;
+        }
+        section{
+            text-align: center;
+            background-color:rgb(20, 190, 190);
+            padding-bottom: 20px;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            font-weight: 900;
+            padding: 20px;
+            text-align: center;
+        }
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+    top:100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color:transparent;
+    padding: 0 15px;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.nav-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    border-radius: 30px;
+}
+
+.slide {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:white;
+    transition: transform 0.5s ease;
+    transform: translateX(-200px);
+    z-index: 999;
+    padding-top: 60px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.head-1 {
+    color:  #00ccff;
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 15px;
+    pointer-events: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    border-bottom: 1px white;
+}
+
+ul li a {
+    color: #011a41;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+ul li:hover a {
+    color:white;
+    background-color: #0099ff;
+}
+
+ul li a i {
+    width: 30px;
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    left: 20px;
+    top: 15px;
+    background-color:white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+.toggle .common {
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    background-color: #00ccff;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top-line {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle-line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .bottom-line {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input:checked ~ .toggle .top-line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .bottom-line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle-line {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+input:checked ~ .slide {
+    transform: translateX(0);
+}
+
+.background-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-vid {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit:fill;
+    filter: brightness(70%);
+}
+.head-3{
+    color: black;
+}
+.pirate{
+    color:white;
+    font-size:50pt;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    margin-top: 70px;
+}
+.about{
+    color:white;
+    margin-right: 70px;
+    font-family: 'avengeance' sans-serif;
+}
+
+.contact{
+    color:white;
+    margin-right:70px;
+    font-family: 'avengeance' sans-serif;
+}
+
+.home{
+    color:white;
+    margin-left: auto;
+    margin-right: 70px;
+    font-family: 'avengeance' sans-serif;
+}
+.sec-1{
+    background-color:rgba(0,0,0,0);
+    margin-left: 350px;
+    margin-right: 800px;
+    margin-top: 70px;
+    border-radius: 30px;
+    height: 230px;
+    width: 330px;
+    padding:20px;
+    padding-top: 15px;
+    border: 3px solid rgb(0, 170, 255);
+    font-family: 'Josefin Sans', sans-serif;
+}
+#sec-1{
+    margin-left:900px;
+    margin-top: 100px;
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="header">
+            <label>
+                <input type="checkbox" class="ham">
+                <div class="toggle">
+                    <span class="top-line common"></span>
+                    <span class="middle-line common"></span>
+                    <span class="bottom-line common"></span>
+                </div>
+                <div class="slide">
+                    <h1 style="color:#0099ff;text-align: center;">MENU</h1>
+                    <ul>
+                       <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="./team member.html" target="_blank"><i class="fas fa-users"></i> Team Members</a></li>
+                        <li><a href="./research.html" target="_blank"><i class="fas fa-book"></i> Research Papers</a></li>
+                        <li><a href="./software.html" target="_blank"><i class="fas fa-laptop-code"></i> Softwares</a></li>
+                        <li><a href="./about.html" target="_blank"><i class="fas fa-user"></i> About Us</a></li>
+                        <li><a href="./contact.html" target="_blank"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    </ul>
+                    </ul>
+                </div>
+            </label>
+        </div>
+       <p class="home"><a href="./index.html" style="color: white;text-decoration: none;" target="_blank">Home</a></p>
+          <p class="about"><a href="./about.html"  style="color: white;text-decoration: none;" target="_blank">About Us</a></p>
+          <p class="contact"><a href="./contact.html"  style="color: white;text-decoration: none;" target="_blank">Contact Us</a></p>
+      <div class="header">
+          <a href="./index.html" target="_blank"><img src="./Logo.png" class="logo"/></a> 
+      </div> 
+    </nav>
+
+    <section>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Panel Estimation Calculator</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 300px;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Solar Panel Estimation Calculator</h1>
+
+    <label for="country">Select Country:</label>
+    <select id="country">
+        <option value="USA">United States</option>
+        <option value="IN">India</option>
+        <option value="CA">Canada</option>
+        <option value="AU">Australia</option>
+        <!-- Add more countries as needed -->
+    </select>
+
+    <label for="panelType">Type of Solar Panel:</label>
+    <select id="panelType">
+        <option value="standard">Standard Efficiency</option>
+        <option value="highEfficiency">High Efficiency</option>
+    </select>
+
+    <label for="landArea">Area of Land (in square feet):</label>
+    <select id="landArea">
+            <option value="1000">1000 sq ft</option>
+            <option value="2000">2000 sq ft</option>
+            <option value="3000">3000 sq ft</option>
+            <option value="4000">4000 sq ft</option>
+            <option value="5000">5000 sq ft</option>
+            <!-- Add more options as needed -->
+     </select>
+    <input type="number" id="landArea" placeholder="Enter land area in square feet" />
+
+    <label for="energyUsage">Estimated Monthly Energy Usage (kWh):</label>
+    <select id="energyUsage">
+        <option value="low">Low (200 - 500 kWh)</option>
+        <option value="medium">Medium (500 - 1000 kWh)</option>
+        <option value="high">High (1000+ kWh)</option>
+    </select>
+
+    <label for="map">Select your Location on the Map:</label>
+    <div id="map"></div>
+
+    <div class="error" id="errorMsg"></div>
+
+    <div id="results" style="color: aliceblue;">
+        <h2>Results:</h2>
+        <p id="solarIrradiance">Solar Irradiance (kWh/m²/day): </p>
+        <p id="costEstimate">Total Cost Estimate: </p>
+        <p id="savingsEstimate">Estimated Yearly Savings: </p>
+        <p id="recommendedPanels">Recommended Number of Panels: </p>
+        <p id="recommendedProvider">Recommended Provider: </p>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    // Currency mapping based on country selection
+    const currencyMapping = {
+        'USA': { symbol: '$', panelCost: 300, installationCost: 500 },
+        'IN': { symbol: '₹', panelCost: 22000, installationCost: 20000 },
+        'CA': { symbol: 'C$', panelCost: 380, installationCost: 600 },
+        'AU': { symbol: 'A$', panelCost: 400, installationCost: 700 },
+        // Add more countries as needed
+    };
+
+    const map = L.map('map').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    let userLat, userLng;
+
+    map.on('click', function (e) {
+        userLat = e.latlng.lat;
+        userLng = e.latlng.lng;
+        L.marker([userLat, userLng]).addTo(map).bindPopup("Selected Location").openPopup();
+        getSolarIrradiance(userLat, userLng);
+    });
+
+    function getSolarIrradiance(lat, lng) {
+        const irradiance = Math.random() * (5.5 - 3.5) + 3.5; // Simulated irradiance
+        document.getElementById('solarIrradiance').textContent = `Solar Irradiance (kWh/m²/day): ${irradiance.toFixed(2)}`;
+        calculateResults(irradiance);
+    }
+
+    document.getElementById('country').addEventListener('change', () => calculateResults());
+    document.getElementById('panelType').addEventListener('change', () => calculateResults());
+    document.getElementById('landArea').addEventListener('input', () => calculateResults());
+    document.getElementById('energyUsage').addEventListener('change', () => calculateResults());
+
+    function calculateResults(solarIrradiance = 4.5) {
+        const country = document.getElementById('country').value;
+        const panelType = document.getElementById('panelType').value;
+        const landArea = document.getElementById('landArea').value; // Area in square feet
+        const energyUsage = document.getElementById('energyUsage').value;
+        const errorMsg = document.getElementById('errorMsg');
+
+        // Reset error message
+        errorMsg.textContent = '';
+
+        // Validate inputs
+        if (!landArea || landArea <= 0) {
+            errorMsg.textContent = 'Please enter a valid area of land.';
+            return;
+        }
+        if (!energyUsage) {
+            errorMsg.textContent = 'Please select your estimated energy usage.';
+            return;
+        }
+        if (!userLat || !userLng) {
+            errorMsg.textContent = 'Please select a location on the map.';
+            return;
+        }
+
+        const { symbol, panelCost, installationCost } = currencyMapping[country];
+        
+        // Determine panel specifications based on type
+        const panelSize = panelType === 'standard' ? 17 : 20; // Example panel sizes in square feet
+        const panelOutput = panelType === 'standard' ? 250 : 320; // Panel output in watts
+
+        // Convert panel output to kW
+        const panelOutputInKW = panelOutput / 1000; // Convert watts to kW
+        
+        // Convert monthly energy usage to daily usage (in kW)
+        const dailyEnergyUsage = getDailyEnergyUsage(energyUsage); // Convert monthly usage to daily
+
+        // Calculate the maximum number of panels that can fit in the available land area
+        const maxPanelsByArea = Math.floor(landArea / panelSize);
+
+        // Calculate how much power is needed (in kW)
+        const requiredPanelsByPower = Math.ceil(dailyEnergyUsage / (panelOutputInKW * solarIrradiance)); // Output in kW
+
+        // Get the final number of panels needed
+        const numberOfPanels = Math.min(maxPanelsByArea, requiredPanelsByPower);
+
+        // Calculate costs
+        const totalCost = (numberOfPanels * panelCost) + (numberOfPanels * installationCost);
+        const estimatedSavings = numberOfPanels * panelOutput * 0.1 * 365; // Assuming 10% of output as savings
+
+        document.getElementById('costEstimate').textContent = `Total Cost Estimate: ${symbol}${totalCost.toFixed(2)}`;
+        document.getElementById('savingsEstimate').textContent = `Estimated Yearly Savings: ${symbol}${estimatedSavings.toFixed(2)}`;
+        document.getElementById('recommendedPanels').textContent = `Recommended Number of Panels: ${numberOfPanels}`;
+
+        const provider = userLat > 0 ? 'Tata Power Solar' : 'Adani Solar';
+        document.getElementById('recommendedProvider').textContent = `Recommended Provider: ${provider}`;
+    }
+
+    function getDailyEnergyUsage(energyUsage) {
+        // Convert monthly energy usage to daily usage
+        switch (energyUsage) {
+            case 'low': return 500 / 30;   // Assuming 500 kWh monthly
+            case 'medium': return 750 / 30; // Assuming 750 kWh monthly
+            case 'high': return 1000 / 30;  // Assuming 1000 kWh monthly
+            default: return 0;
+        }
+    }
+</script>
+
+
+
+</body>
+</html>
+
+    </section>
+    <footer>
+        <p class="foot">&copy; 2024 Pixel Pirates. All rights reserved.</p>
+     </footer>
+</body>
+
+</html>

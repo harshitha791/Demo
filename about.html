@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        .about-section {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            padding: 80px 20px;
+            color: #fff;
+            text-align: center;
+            border-bottom: 5px solid #ff6f61;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #ff6f61;
+            font-weight: bold;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff8563;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        .about-section {
+            background-color:cyan;
+            padding: 80px 20px;
+            color: #fff;
+            text-align: center;
+            border-bottom: 5px solid #ff6f61;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size:2px;
+            color: black;
+            margin-bottom: 20px;
+            margin-left:100px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #ff6f61;
+            font-weight: bold;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color:green;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff8563;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+
+        button{
+        border-radius: 20px;
+        color: white;
+        background-color: rgba(0,0,0,0);
+        margin-left: 100px;
+        width: 90px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-top: 25PX;
+        cursor: pointer;
+        background-color: rgb(20, 206, 206);
+        transition: .4s;
+    }
+    button:hover{
+        background-color: transparent;
+        border: 3px solid  rgb(20, 206, 206);
+       
+    }
+    .foot{
+        background-color:rgba(0,0,0,0.7);
+        color: white;
+        margin-top: 50px;
+        text-align:center ;
+        padding: 20px;
+        font-weight: 900;
+    }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color:transparent;
+    padding: 0 15px;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.nav-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    border-radius: 30px;
+}
+
+.slide {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:white;
+    transition: transform 0.5s ease;
+    transform: translateX(-200px);
+    z-index: 999;
+    padding-top: 60px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.head-1 {
+    color:  #00ccff;
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 15px;
+    pointer-events: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    border-bottom: 1px white;
+}
+
+ul li a {
+    color: #011a41;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+ul li:hover a {
+    color:white;
+    background-color: #0099ff;
+}
+
+ul li a i {
+    width: 30px;
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    left: 20px;
+    top: 15px;
+    background-color:white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+.toggle .common {
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    background-color: #00ccff;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top-line {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle-line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .bottom-line {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input:checked ~ .toggle .top-line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .bottom-line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle-line {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+input:checked ~ .slide {
+    transform: translateX(0);
+}
+
+.background-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-vid {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit:fill;
+    filter: brightness(70%);
+}
+.head-3{
+    color: black;
+}
+.pirate{
+    color:white;
+    font-size:50pt;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    margin-top: 70px;
+}
+.about{
+    color:white;
+    margin-right: 70px;
+    font-family: 'avengeance' sans-serif;
+    margin-top: 25px;
+}
+
+.contact{
+    color:white;
+    margin-right:70px;
+    font-family: 'avengeance' sans-serif;
+    margin-top: 25px;
+}
+
+.home{
+    color:white;
+    margin-left: auto;
+    margin-right: 70px;
+    font-family: 'avengeance' sans-serif;
+    margin-top: 25px;
+}
+.sec-1{
+    background-color:rgba(0,0,0,0);
+    margin-left: 550px;
+    margin-right: 800px;
+    margin-top: 50px;
+    border: 2px solid #40E0D0;
+    border-radius:25px;
+    height: 230px;
+    width: 430px;
+    padding:20px;
+    padding-top: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#sec-1{
+    margin-left:900px;
+    margin-top: 150px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="header">
+            <label>
+                <input type="checkbox">
+                <div class="toggle">
+                    <span class="top-line common"></span>
+                    <span class="middle-line common"></span>
+                    <span class="bottom-line common"></span>
+                </div>
+                <div class="slide">
+                    <h2 style="color:#0099ff;">&nbsp;&nbsp;&nbsp;&nbsp;MENU</h2>
+                    <ul>
+                        <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="./team member.html" target="_blank"><i class="fas fa-users"></i> Team Members</a></li>
+                        <li><a href="./research.html" target="_blank"><i class="fas fa-book"></i> Research Papers</a></li>
+                        <li><a href="./software.html" target="_blank"><i class="fas fa-laptop-code"></i> Softwares</a></li>
+                        <li><a href="./about.html" target="_blank"><i class="fas fa-user"></i> About Us</a></li>
+                        <li><a href="./contact.html" target="_blank"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+          <p class="home"><a href="./index.html" style="color: white;text-decoration: none;" target="_blank">Home</a></p>
+          <p class="about"><a href="./about.html"  style="color: white;text-decoration: none;" target="_blank">About Us</a></p>
+          <p class="contact"><a href="./contact.html"  style="color: white;text-decoration: none;" target="_blank">Contact Us</a></p>
+        <div class="header">
+            <a href="./index.html"><img src="./Logo.png" class="logo"/></a> 
+        </div> 
+    </nav>
+    <section class="about-section">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>
+                We are a group of enthusiastic <span class="highlight">problem-solvers</span> committed to leveraging technology for meaningful solutions. 
+                With a shared passion for innovation, we strive to develop creative, user-friendly products that not only meet but exceed expectations. 
+                Our team combines <span class="highlight">technical expertise</span> with a drive for constant improvement, working collaboratively to tackle complex challenges. 
+                From ideation to implementation, we believe in the power of technology to transform industries and create positive change. 
+                Together, we aim to shape a future where technology enhances lives and builds a more connected world.
+            </p>
+            <a href="./contact" class="btn">Contact Us</a>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="icon" href="./Logo.png" type="image/x-icon">
+</head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: white;
+            overflow-x: hidden; 
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 100px; 
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        
+        nav {
+            width: 100%;
+            height: 60px;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+        }
+
+        
+        .toggle {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+            left: 20px;
+            top: 15px;
+            background-color: #f2f2f2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1001; 
+        }
+
+        .toggle .common {
+            position: absolute;
+            height: 3px;  
+            width: 22px;  
+            background-color: #00ccff;
+            border-radius: 50px;
+            transition: 0.3s ease;
+        }
+
+        .toggle .top-line {
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .toggle .middle-line {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .toggle .bottom-line {
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input:checked ~ .toggle .top-line {
+            left: 2px;
+            top: 14px;
+            width: 25px;
+            transform: rotate(45deg);
+        }
+
+        input:checked ~ .toggle .bottom-line {
+            left: 2px;
+            top: 14px;
+            width: 25px;
+            transform: rotate(-45deg);
+        }
+
+        input:checked ~ .toggle .middle-line {
+            transform: translateX(20px);
+            opacity: 0;
+        }
+
+        .slide {
+            height: 100%;
+            width: 180px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            transition: 0.5s ease;
+            transform: translateX(-180px);
+            z-index: 999; 
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        input:checked ~ .slide {
+            transform: translateX(0);
+        }
+
+        .slide h1 {
+            color:#00ccff ;
+            font-weight: 800;
+            pointer-events: none;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 0;  
+        }
+
+        ul li {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        ul li a {
+            color: #011a41;
+            font-weight: 500;
+            display: flex;
+            align-items: center; 
+            text-transform: capitalize;
+            text-decoration: none;
+            transition: 0.2s ease-out;
+        }
+
+        ul li:hover a {
+            color: #f2f2f2;
+            background-color: #00ccff;
+            padding-left: 10px; 
+        }
+        
+
+        ul li a i {
+            width: 20px;  
+            margin-right: 10px;  
+            text-align: center;
+        }
+
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+        }
+
+        .card-1 {
+            background-color: rgb(58, 223, 223);
+            color: aliceblue;
+        }
+
+        .card-2 {
+            background-color: rgb(20, 172, 45);
+            color: white;
+        }
+
+        .card-3 {
+            background-color: rgb(203, 12, 130);
+            color: white;
+        }
+
+        .card p {
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            padding: 10px 15px;
+            background-color: white;
+            border: 1px solid gold;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .card button:hover {
+            background-color: gold;
+        }
+
+        .card button a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .but-1 {
+            border-color: gold;
+        }
+
+        #green {
+            color: green;
+        }
+        .about{
+    color:white;
+    margin-right: 70px;
+    font-family: 'avengeance' sans-serif;
+    margin-top: 25px;
+}
+
+.contact{
+    color:white;
+    margin-right:70px;
+    font-family: 'avengeance' sans-serif;
+    margin-top: 25px;
+}
+
+.home{
+    color:white;
+    margin-left: auto;
+    margin-right: 70px;
+    font-family: 'avengeance' sans-serif;
+    margin-top: 25px;
+}
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <label>
+            <input type="checkbox">
+            <div class="toggle">
+                <span class="top-line common"></span>
+                <span class="middle-line common"></span>
+                <span class="bottom-line common"></span>
+            </div>
+            <div class="slide">
+                <h1 style="color: #00ccff;">MENU</h1>
+                <ul>
+                    <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="./team member.html" target="_blank"><i class="fas fa-users"></i> Team Members</a></li>
+                    <li><a href="./research.html" target="_blank"><i class="fas fa-book"></i> Research Papers</a></li>
+                    <li><a href="./software.html" target="_blank"><i class="fas fa-laptop-code"></i> Softwares</a></li>
+                    <li><a href="./about.html" target="_blank"><i class="fas fa-user"></i> About Us</a></li>
+                    <li><a href="./contact.html" target="_blank"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                </ul>
+                </ul>
+            </div>
+        </label>
+       <p class="home"><a href="./index.html" style="color: white;text-decoration: none;" target="_blank">Home</a></p>
+          <p class="about"><a href="./about.html"  style="color: white;text-decoration: none;" target="_blank">About Us</a></p>
+          <p class="contact"><a href="./contact.html"  style="color: white;text-decoration: none;" target="_blank">Contact Us</a></p>
+      <div class="header">
+          <a href="./index.html"><img src="./Logo.png" class="logo"/></a> 
+      </div> 
+    </nav>
+
+    <h1>Contact Us</h1>
+    <p>Have any questions? We’d love to hear from you.</p>
+
+
+    <div class="container">
+        <div class="card card-1">
+            <h2>E-Mail Us</h2>
+            <p>You can also reach us via E-Mail</p>
+            <button><a href="mailto:pixelpirates2024@gmail.com" target="_blank">Click here</a></button>
+        </div>
+        
+        <div class="card card-2">
+            <h2>Call Us</h2>
+            <p>Feel free to call us</p>
+            <button><a href="tel:+916361213383" target="_blank">Click here</a></button>
+        </div>
+        
+        <div class="card card-3">
+            <h2>Visit Us</h2>
+            <p>Visit us at Amity University Bengaluru, Karnataka.</p>
+            <button><a href="https://g.co/kgs/zSn2v7y" target="_blank">Click here</a></button>
+        </div>
+    </div>
+</body>
+</html>
+    
+    

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Innovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Avengeance:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        .about-section {
+            background-color:cyan;
+            padding: 80px 20px;
+            color: #fff;
+            text-align: center;
+            border-bottom: 5px solid #ff6f61;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size:2px;
+            color: black;
+            margin-bottom: 20px;
+            margin-left:100px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #ff6f61;
+            font-weight: bold;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color:green;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff8563;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+
+        button{
+        border-radius: 20px;
+        color: white;
+        background-color: rgba(0,0,0,0);
+        margin-left: 100px;
+        width: 90px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-top: 25PX;
+        cursor: pointer;
+        background-color: rgb(20, 206, 206);
+        transition: .4s;
+    }
+    button:hover{
+        background-color: transparent;
+        border: 3px solid  rgb(20, 206, 206);
+       
+    }
+    .foot{
+        background-color:rgba(0,0,0,0.7);
+        color: white;
+        margin-top: 50px;
+        text-align:center ;
+        padding: 20px;
+        font-weight: 900;
+    }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color:transparent;
+    padding: 0 15px;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.nav-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    border-radius: 30px;
+}
+
+.slide {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:white;
+    transition: transform 0.5s ease;
+    transform: translateX(-200px);
+    z-index: 999;
+    padding-top: 60px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.head-1 {
+    color:  #00ccff;
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 15px;
+    pointer-events: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    border-bottom: 1px white;
+}
+
+ul li a {
+    color: #011a41;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+ul li:hover a {
+    color:white;
+    background-color: #0099ff;
+}
+
+ul li a i {
+    width: 30px;
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    left: 20px;
+    top: 15px;
+    background-color:white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+.toggle .common {
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    background-color: #00ccff;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top-line {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle-line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .bottom-line {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input:checked ~ .toggle .top-line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .bottom-line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle-line {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+input:checked ~ .slide {
+    transform: translateX(0);
+}
+
+.background-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-vid {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit:fill;
+    filter: brightness(70%);
+}
+.head-3{
+    color: black;
+}
+.pirate{
+    color:white;
+    font-size:50pt;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    margin-top: 70px;
+}
+.about{
+    color:white;
+    margin-right: 70px;
+    font-family: 'avengeance' sans-serif;
+    margin-top: 25px;
+}
+
+.contact{
+    color:white;
+    margin-right:70px;
+    font-family: 'avengeance' sans-serif;
+    margin-top: 25px;
+}
+
+.home{
+    color:white;
+    margin-left: auto;
+    margin-right: 70px;
+    font-family: 'avengeance' sans-serif;
+    margin-top: 25px;
+}
+.sec-1{
+    background-color:rgba(0,0,0,0);
+    margin-left: 550px;
+    margin-right: 800px;
+    margin-top: 50px;
+    border: 2px solid #40E0D0;
+    border-radius:25px;
+    height: 230px;
+    width: 430px;
+    padding:20px;
+    padding-top: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#sec-1{
+    margin-left:900px;
+    margin-top: 150px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="header">
+            <label>
+                <input type="checkbox">
+                <div class="toggle">
+                    <span class="top-line common"></span>
+                    <span class="middle-line common"></span>
+                    <span class="bottom-line common"></span>
+                </div>
+                <div class="slide">
+                    <h2 style="color:#0099ff;">&nbsp;&nbsp;&nbsp;&nbsp;MENU</h2>
+                    <ul>
+                        <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="./team member.html" target="_blank"><i class="fas fa-users"></i> Team Members</a></li>
+                        <li><a href="./research.html" target="_blank"><i class="fas fa-book"></i> Research Papers</a></li>
+                        <li><a href="./software.html" target="_blank"><i class="fas fa-laptop-code"></i> Softwares</a></li>
+                        <li><a href="./about.html" target="_blank"><i class="fas fa-user"></i> About Us</a></li>
+                        <li><a href="./contact.html" target="_blank"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+          <p class="home"><a href="./index.html" style="color: white;text-decoration: none;" target="_blank">Home</a></p>
+          <p class="about"><a href="./about.html"  style="color: white;text-decoration: none;" target="_blank">About Us</a></p>
+          <p class="contact"><a href="./contact.html"  style="color: white;text-decoration: none;" target="_blank">Contact Us</a></p>
+        <div class="header">
+            <a href="./index.html"><img src="./Logo.png" class="logo"/></a> 
+        </div> 
+    </nav>
+    <section class="about-section">
+        <div class="container">
+            <h1>Solar Innovation</h1>
+            <p>
+                As the world increasingly shifts toward sustainable energy solutions, solar energy stands out as a key player in the transition to a 
+cleaner energy future.Solar energy, derived from the sun’s rays, represents one of the most abundant and cleanest sources of power 
+available. Its ability to reduce greenhouse gas emissions and decrease reliance on fossil fuels makes it a cornerstone of environmental 
+and energy policies worldwide.
+
+
+
+there are many types of advanced solar technologies, namely tandem solar cells(involve multiple types of photovoltaic materials to increase overall energy production rate); quantum dot
+solar cells(experimental stage tech) and solar windows to name a few.
+
+
+
+we also have some dynamic and adaptive solar energy generative techniques. a couple of them are smart solar inverters(involve AI to read data and enhance grid stability) and adaptive
+solar panels(change orientation wrt ground according to the angle at which sunlight falls to maximize energy production)
+
+
+
+development and research in this field of energy generation have also given rise to good energy management and storage options, some being integrated solar storage(uses solid state
+batteries for storing excess energy and save it for low production periods) and virtual power plants(AI driven plants that manage multiple sources and storage systems ass a unified entity)
+
+
+
+many scientists, engineers and the likes have come up with a lot of innovative installation and designing of solar power capturing devices. a few have been mentioned below:
+
+flexible solar panels: versatile lightweight panels that can be installed on curved surfaces and unconventional structures
+
+building integrated photovoltaics: solar panels integrated into building materials like facades and roof tiles
+
+
+
+depending solely on solar energy as a source in itself was discovered to not be the most efficient way to produce energy, but by combining it with other sources as well. some such examples
+are:
+
+solar-geothermal systems: utilize geothermal energy when solar energy is low and vice versa
+
+solar wind hybrid systems: useful in areas with diverse weather conditions
+
+
+
+there are also many ways the solar energy that is produced can be put to good use. some examples are solar powered desalination(provides freshwater in regions with limited resources) and
+solar fuel production(energy used to produce clean fuels like hydrogen)
+
+
+
+with such advancements in developing super efficient solar power generators, the need for ways to control abnormalities and other such issues also arised. to fix this, smart grid
+integrations were involved. a couple such applications are demand response systems(programs that adjust consumption based on energy availability to reduce strain at peak times) and 
+blockchain for energy trading(enables decentralized energy trading, allowing direct transactions between energy producers and consumers)
+
+
+
+fixed solar energy production units were found to be restrictive as we kept getting better at tech, so portable and remote solutions for the same were intruduced. a couple applications
+of this are solar powered drones(solar panel equipped drones utilized for monitoring and surveillance) and portable solar generators()
+            </p>
+        
+        </div>
+    </section>
+</body>
+</html>
